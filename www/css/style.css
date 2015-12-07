@@ -1,0 +1,68 @@
+/* Empty. Add your own CSS if you like */
+.center-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.center-content > .scroll {
+  display: table-cell;
+  vertical-align: middle;
+  
+}
+.login-container {
+    background-color: #f1f1f1;
+    max-width: 337px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px 10px 10px;
+    
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(39,22,100,1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(39,22,100,1);
+    box-shadow: 5px 5px 5px 0px rgba(39,22,100,1);
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.login-container > .logo {
+    text-align: center;
+}
+
+.login {
+    background: url(../img/background_3.jpg);
+    background-position: center top;
+    background-size: 100% 100%;
+    /*background-color: #271664;*/
+    /*color: #95989a;*/
+}
+
+.login .list-inset {
+    background-color: transparent;
+}
+
+.login .list-inset .item {
+    background-color: transparent;
+    /*border-bottom: solid 1px #45357e;*/
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.login .list-inset .item:target {
+    border-bottom: solid 2px #fff;
+}
+
+.login input {
+    /*color: #271664;*/
+}
+
+/*.login input::-webkit-input-placeholder {
+  color: #45357e;
+}
+.login input:-moz-placeholder {
+  color: #45357e;
+}
+.login input:-ms-input-placeholder {  IE10+ 
+  color: #45357e ;
+}*/
