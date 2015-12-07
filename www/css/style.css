@@ -30,10 +30,10 @@
 }
 
 .login {
-    background: url(../img/background_3.jpg);
-    background-position: center top;
-    background-size: 100% 100%;
-    /*background-color: #271664;*/
+    background: url(../img/background.png);
+    /*background-position: center top;*/
+    /*background-size: 100% 100%;*/
+    background-color: #271664;
     /*color: #95989a;*/
 }
 
