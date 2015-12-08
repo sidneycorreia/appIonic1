@@ -11,9 +11,9 @@
 	*/
 	angular
 	.module('app')
-	.controller('IndexCtrl', Index);
+	.controller('AlunosListaCtrl', Controller);
 
-	Index.$inject = ['indexService'];
+	Controller.$inject = ['indexService'];
 
 	/*
 	* recommend
@@ -21,17 +21,12 @@
 	* and bindable members up top.
 	*/
 
-	function Index(indexService) {
+	function Controller(indexService) {
             /*jshint validthis: true */
-            console.log('teste');
             var vm = this;
-//            vm.title = "Hello, Angm-Generator!";
-            vm.title = "";
-            vm.version = "0.3.x";
+            vm.title = "FILHOS";
             vm.listFeatures = indexService.getFeaturesList();
-            
-            
-            console.log(vm.title);
+
             return vm;
 	}
 

@@ -31,10 +31,8 @@
 
 .login {
     background: url(../img/background.png);
-    /*background-position: center top;*/
-    /*background-size: 100% 100%;*/
-    background-color: #271664;
-    /*color: #95989a;*/
+    /*background-color: #271664;*/
+    background-color: #0059A5;
 }
 
 .login .list-inset {
@@ -66,3 +64,64 @@
 .login input:-ms-input-placeholder {  IE10+ 
   color: #45357e ;
 }*/
+
+/* *******************
+* CUSTOM HEADER
+******************** */
+
+.header-wrapper {
+    color: #fff;
+}
+
+.header-wrapper > .header-content {
+    background-color: #0059A5 !important;
+    /*background: url(../img/background.png);*/
+    border-botom: solid 1px #0c63ee;
+    
+    height: 190px;
+    padding-top: 44px;
+    width: 100%;
+    
+    -webkit-box-shadow: 0px 1px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 17px 0px rgba(0,0,0,0.75);
+}
+
+.header-wrapper > .button-rounded {
+    float: right;
+    right: 10px;
+    top: -26px;
+    z-index: 10;
+    
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+}
+
+.header-wrapper > .header-content > h2,h4 {
+    color: #fff;
+}
+
+.has-expanded-header {
+    top: 195px;
+}
+
+.bar-trasparent {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.button-rounded {
+    height: 52px;
+    
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    border-radius: 26px;
+}
+
+
+.button-rounded.icon:before, .button-rounded.icon-left:before, .button-rounded.icon-right:before {
+    font-size: 32px !important;
+    line-height: 46px !important;
+}
