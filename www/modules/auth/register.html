@@ -1,29 +1,34 @@
 <ion-view hide-nav-bar="true">
     <ion-content class="padding center-content login">
-        <div class="row row-center">
-            <div class="col col-center">
-                <img src="img/logo.jpg" width="30%"/>
+        <div class="login-container">
+            <div class="row row-center logo">
+                <div class="col col-center">
+                    <img src="img/logo.jpg" width="120"/>
+                </div>
             </div>
-        </div>
 
-        <div class="list list-inset">
-            <label class="item item-input">
-                <input type="text" placeholder="NOME">
-            </label>
-            <label class="item item-input">
-                <input type="text" placeholder="EMAIL">
-            </label>
-            <label class="item item-input">
-                <input type="text" placeholder="SENHA">
-            </label>
-            <label class="item item-input">
-                <input type="text" placeholder="REPITA A SENHA">
-            </label>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" placeholder="NOME">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="EMAIL">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="SENHA">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="REPITA A SENHA">
+                </label>
+            </div>
+
+            <button class="button button-block button-positive">
+                Salvar
+            </button>
+            
+            <p class="text-center padding-top">
+                <a href="#/auth/login" class="button button-clear button-positive">Ir para o login</a>
+            </p>
         </div>
-        
-        <button class="button button-block button-positive">
-            Salvar
-        </button>
-        
     </ion-content>
 </ion-view>
