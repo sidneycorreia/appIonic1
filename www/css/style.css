@@ -120,8 +120,15 @@
     border-radius: 26px;
 }
 
-
 .button-rounded.icon:before, .button-rounded.icon-left:before, .button-rounded.icon-right:before {
     font-size: 32px !important;
     line-height: 46px !important;
+}
+
+/* **********************
+* LISTA DE ALUNOS
+*********************** */
+
+.alunos-avatar {
+    border-radius: 50%;
 }
