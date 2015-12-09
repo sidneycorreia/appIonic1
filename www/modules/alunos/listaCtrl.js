@@ -13,7 +13,7 @@
 	.module('app')
 	.controller('AlunosListaCtrl', Controller);
 
-	Controller.$inject = ['alunosService'];
+	Controller.$inject = ['alunosService', '$ionicModal','$scope'];
 
 	/*
 	* recommend
@@ -21,12 +21,39 @@
 	* and bindable members up top.
 	*/
 
-	function Controller(alunosService) {
+	function Controller(alunosService, $ionicModal, $scope) {
             /*jshint validthis: true */
             var vm = this;
             vm.title = "FILHOS";
             vm.alunosList = alunosService.getList();
+            vm.avatarsList = alunosService.getAvatars();
+            
+            /* INICIO MODAL */
+            $ionicModal.fromTemplateUrl('add-aluno-modal.html', {
+                scope: $scope,
+                animation: 'slide-in-up'
+            }).then(function(modal) {
+                vm.modal = modal;
+            })
+            
+            vm.openModal = function() {
+                vm.modal.show()
+            }
 
+            vm.closeModal = function() {
+                vm.modal.hide();
+            };
+
+            $scope.$on('$destroy', function() {
+                vm.modal.remove();
+            });
+            /* FIM MODAL */
+            
+            vm.selectedAvatar = 1;
+            vm.selectAvatar = function (index) {
+                vm.selectedAvatar = index;
+            }
+            
             return vm;
 	}
 

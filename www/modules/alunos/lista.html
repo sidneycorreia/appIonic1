@@ -5,30 +5,65 @@
             <h4>Ionic material design</h4>
         </div>
 
-        <a href="#/auth/login" class="button button-positive button-rounded icon ion-plus"></a>
+        <a href="javascript:;" class="button button-positive button-rounded icon ion-plus" ng-click="vm.openModal()"></a>
     </div>
-    <ion-content class="padding has-expanded-header">
+    <ion-content class="has-expanded-header">
 
-        <div class="row" ng-repeat="aluno in vm.alunosList" ng-if="$index % 2 === 0">
-            <div class="col text-center" ng-if="$index < vm.alunosList.length">
-                <div class="aluno-avt bg-color-{{vm.alunosList[$index].avatar_bg}}">
-                    <i class="avt-sm avt-{{vm.alunosList[$index].avatar}}"> </i>
+        <ion-list>
+            <ion-item ng-repeat="aluno in vm.alunosList" class="item-thumbnail-left item-icon-right item-borderless">
+
+                <img ng-src="img/face-{{aluno.avatar}}.png" class="aluno-avt bg-color-{{aluno.avatar_bg}}"/>
+
+                <div>
+                    <br/>
+                    <strong>{{aluno.nome}}</strong>
+                    <p>Infantil III </p>
                 </div>
-                
-                <h4>{{vm.alunosList[$index].nome}}</h4>
-            </div>
-            <div class="col text-center" ng-if="$index + 1 < vm.alunosList.length">
-                <div class="aluno-avt bg-color-{{vm.alunosList[$index + 1].avatar_bg}}">
-                    <i class="avt-sm avt-{{vm.alunosList[$index + 1].avatar}}"></i>
-                </div>
-                
-                <h4>{{vm.alunosList[$index + 1].nome}}</h4>
-            </div>
-        </div>
-        
+
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
 
         <p class="text-center padding-top">
             <a href="#/auth/login" class="button button-clear button-positive">Login</a>
         </p>
+
     </ion-content>
 </ion-view>
+
+<script id="add-aluno-modal.html" type="text/ng-template">
+  <div class="modal">
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Adicionar</h1>
+    </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Código do aluno</span>
+                  <input type="text" placeholder="Código do aluno">
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Nome</span>
+                  <input type="text" placeholder="Nome">
+                </label>
+            </div>
+            
+            
+            <div class="row" ng-repeat="avatar in vm.avatarsList" ng-if="$index % 3 === 0">
+                <div class="col col-33" ng-if="$index < vm.avatarsList.length" ng-click="vm.selectAvatar($index)" ng-class="$index == vm.selectedAvatar ? 'aluno-avt-select' : ''">
+                    <img ng-src="img/face-{{vm.avatarsList[$index].name}}.png" width="100%" />
+                </div>
+                <div class="col col-33" ng-if="$index + 1 < vm.avatarsList.length" ng-click="vm.selectAvatar($index+1)" ng-class="$index+1 == vm.selectedAvatar ? 'aluno-avt-select' : ''">
+                    <img ng-src="img/face-{{vm.avatarsList[$index + 1].name}}.png" width="100%" />
+                </div>
+                <div class="col col-33" ng-if="$index + 2 < vm.avatarsList.length" ng-click="vm.selectAvatar($index+2)" ng-class="$index+2 == vm.selectedAvatar ? 'aluno-avt-select' : ''">
+                    <img ng-src="img/face-{{vm.avatarsList[$index + 2].name}}.png" width="100%" />
+                </div>
+            </div>
+            
+        </ion-content>
+    <ion-footer-bar>
+      <a href="javascript:;" class="button button-clear button-positive pull-right icon-right ion-chevron-right" ng-click="vm.closeModal()">Salvar&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </ion-footer-bar>
+  </div>
+</script>

@@ -104,7 +104,7 @@
 }
 
 .has-expanded-header {
-    top: 195px;
+    top: 220px;
 }
 
 .bar-trasparent {
@@ -131,7 +131,6 @@
 *********************** */
 
 .aluno-avt {
-    background: url('../img/avatar-bg-sm.png') no-repeat;
     border-radius: 50%;
     display: inline-block;
     
@@ -139,6 +138,16 @@
     -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
 }
+
+.aluno-avt-select {
+    border-radius: 50%;
+    
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,89,165,1);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,89,165,1);
+    box-shadow: 0px 0px 5px 2px rgba(0,89,165,1);
+}
+
+/* ************************* */
 
 .bg-color-lime		{ background-color: #A4C400; }
 .bg-color-green		{ background-color: #60A917; }
@@ -180,3 +189,13 @@
 .avt-sm.avt-kid-6 { background-position: -500px 0; } 
 .avt-sm.avt-kid-7 { background-position: -600px 0; } 
 .avt-sm.avt-kid-8 { background-position: -700px 0; }
+
+.avt-sx { background: url('../img/avatar-sprite-sx.png') no-repeat top left; width: 75px; height: 75px; display: block; } 
+.avt-sx.avt-kid-1 { background-position: 0 0; } 
+.avt-sx.avt-kid-2 { background-position: -75px 0; } 
+.avt-sx.avt-kid-3 { background-position: -150px 0; } 
+.avt-sx.avt-kid-4 { background-position: -225px 0; } 
+.avt-sx.avt-kid-5 { background-position: -300px 0; } 
+.avt-sx.avt-kid-6 { background-position: -375px 0; } 
+.avt-sx.avt-kid-7 { background-position: -450px 0; } 
+.avt-sx.avt-kid-8 { background-position: -525px 0; }

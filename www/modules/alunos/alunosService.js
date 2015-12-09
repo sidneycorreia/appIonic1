@@ -28,13 +28,26 @@
 		];
 
 		return {
-			getList: getList
+			getList: getList,
+                        getAvatars: getAvatars
 		};
 
 		function getList() {
-			return list
+                    return list
 		}
-
+                
+                function getAvatars () {
+                    return [
+                        {"name": "kid-1"},
+                        {"name": "kid-2"},
+                        {"name": "kid-3"},
+                        {"name": "kid-4"},
+                        {"name": "kid-5"},
+                        {"name": "kid-6"},
+                        {"name": "kid-7"},
+                        {"name": "kid-8"}
+                    ];
+                }
 	}
 
 })();
