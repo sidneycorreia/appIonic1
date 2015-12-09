@@ -98,7 +98,8 @@
     box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
 }
 
-.header-wrapper > .header-content > h2,h4 {
+.header-wrapper > .header-content > h2,
+.header-wrapper > .header-content > h4 {
     color: #fff;
 }
 
@@ -129,6 +130,37 @@
 * LISTA DE ALUNOS
 *********************** */
 
+.aluno-avt {
+    background: url('../img/avatar-bg-sm.png') no-repeat;
+    border-radius: 50%;
+    display: inline-block;
+    
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+}
+
+.bg-color-lime		{ background-color: #A4C400; }
+.bg-color-green		{ background-color: #60A917; }
+.bg-color-emerald	{ background-color: #008A00; }
+.bg-color-teal		{ background-color: #00ABA9; }
+.bg-color-cyan		{ background-color: #1BA1E2; }
+.bg-color-cobalt	{ background-color: #0050EF; }
+.bg-color-indigo	{ background-color: #6A00FF; }
+.bg-color-violet	{ background-color: #AA00FF; }
+.bg-color-pink		{ background-color: #F472D0; }
+.bg-color-magenta	{ background-color: #D80073; }
+.bg-color-crimson	{ background-color: #A20025; }
+.bg-color-red		{ background-color: #E51400; }
+.bg-color-orange	{ background-color: #FA6800; }
+.bg-color-amber		{ background-color: #F0A30A; }
+.bg-color-yellow	{ background-color: #E3C800; }
+.bg-color-brown		{ background-color: #825A2C; }
+.bg-color-olive		{ background-color: #6D8764; }
+.bg-color-steel		{ background-color: #647687; }
+.bg-color-mauve		{ background-color: #76608A; }
+.bg-color-taupe		{ background-color: #87794E; }
+
 .avt { background: url('../img/avatar-sprite.png') no-repeat top left; width: 200px; height: 200px; display: block; } 
 .avt.avt-kid-1 { background-position: 0 0; } 
 .avt.avt-kid-2 { background-position: -200px 0; } 
@@ -142,9 +174,9 @@
 .avt-sm { background: url('../img/avatar-sprite-sm.png') no-repeat top left; width: 100px; height: 100px; display: block; } 
 .avt-sm.avt-kid-1 { background-position: 0 0; } 
 .avt-sm.avt-kid-2 { background-position: -100px 0; } 
-.avt-sm.avt-kid-3 { background-position: -300px 0; } 
-.avt-sm.avt-kid-4 { background-position: -400px 0; } 
-.avt-sm.avt-kid-5 { background-position: -5000px 0; } 
-.avt-sm.avt-kid-6 { background-position: -600px 0; } 
-.avt-sm.avt-kid-7 { background-position: -700px 0; } 
-.avt-sm.avt-kid-8 { background-position: -800px 0; }
+.avt-sm.avt-kid-3 { background-position: -200px 0; } 
+.avt-sm.avt-kid-4 { background-position: -300px 0; } 
+.avt-sm.avt-kid-5 { background-position: -400px 0; } 
+.avt-sm.avt-kid-6 { background-position: -500px 0; } 
+.avt-sm.avt-kid-7 { background-position: -600px 0; } 
+.avt-sm.avt-kid-8 { background-position: -700px 0; }

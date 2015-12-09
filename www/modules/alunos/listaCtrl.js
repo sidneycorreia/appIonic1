@@ -13,7 +13,7 @@
 	.module('app')
 	.controller('AlunosListaCtrl', Controller);
 
-	Controller.$inject = ['indexService'];
+	Controller.$inject = ['alunosService'];
 
 	/*
 	* recommend
@@ -21,11 +21,11 @@
 	* and bindable members up top.
 	*/
 
-	function Controller(indexService) {
+	function Controller(alunosService) {
             /*jshint validthis: true */
             var vm = this;
             vm.title = "FILHOS";
-            vm.listFeatures = indexService.getFeaturesList();
+            vm.alunosList = alunosService.getList();
 
             return vm;
 	}
