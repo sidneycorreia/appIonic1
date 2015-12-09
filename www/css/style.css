@@ -129,6 +129,22 @@
 * LISTA DE ALUNOS
 *********************** */
 
-.alunos-avatar {
-    border-radius: 50%;
+.avt {
+    background: url('../img/avatar-kid-sprite.png') no-repeat;
+    width: 155px;
+    height: 150px;
+    display: block;
+}
+
+.avt-kid-1 {
+    background-position: 0 0;
+}
+
+.avt-kid-2 {
+    background-position: -155px 0;
+}
+
+.avt-kid-4 {
+    /*155 x 150*/
+    background-position: 0 -150px;
 }
