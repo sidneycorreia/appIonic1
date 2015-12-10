@@ -26,8 +26,9 @@
             var vm = this;
             vm.title = "FILHOS";
             vm.alunosList = alunosService.getList();
-            vm.avatarsList = alunosService.getAvatars();
-            
+            vm.avatarsList = alunosService.getAvatars({pageLength: 3});
+            vm.avatarColors = alunosService.getAvatarsColors({pageLength: 5});
+
             /* INICIO MODAL */
             $ionicModal.fromTemplateUrl('add-aluno-modal.html', {
                 scope: $scope,
@@ -49,9 +50,14 @@
             });
             /* FIM MODAL */
             
-            vm.selectedAvatar = 1;
+            vm.selectedAvatar = 'kid-1';
             vm.selectAvatar = function (index) {
                 vm.selectedAvatar = index;
+            }
+            
+            vm.selectedColor = 'lime';
+            vm.selectColor = function (color) {
+                vm.selectedColor = color;
             }
             
             return vm;

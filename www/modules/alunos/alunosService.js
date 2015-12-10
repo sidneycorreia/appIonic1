@@ -26,27 +26,100 @@
 //                    {"nome": "Filho 7", "avatar": "kid-7", "avatar_bg" : "cobalt"},
 //                    {"nome": "Filho 8", "avatar": "kid-8", "avatar_bg" : "emerald"}
 		];
+                
+                var avatars = [
+                    'kid-1',
+                    'kid-2',
+                    'kid-3',
+                    'kid-4',
+                    'kid-5',
+                    'kid-6',
+                    'kid-7',
+                    'kid-8'
+                ];
+                
+                var colors = [
+                    'lime',
+                    'green',
+                    'emerald',
+                    'teal',
+                    'cyan',
+                    'cobalt',
+                    'indigo',
+                    'violet',
+                    'pink',
+                    'magenta',
+                    'crimson',
+                    'red',
+                    'orange',
+                    'amber',
+                    'yellow',
+                    'brown',
+                    'olive',
+                    'steel',
+                    'mauve',
+                    'taupe'
+                ];
 
 		return {
 			getList: getList,
-                        getAvatars: getAvatars
+                        getAvatars: getAvatars,
+                        getAvatarsColors: getAvatarsColors
 		};
 
 		function getList() {
                     return list
 		}
                 
-                function getAvatars () {
-                    return [
-                        {"name": "kid-1"},
-                        {"name": "kid-2"},
-                        {"name": "kid-3"},
-                        {"name": "kid-4"},
-                        {"name": "kid-5"},
-                        {"name": "kid-6"},
-                        {"name": "kid-7"},
-                        {"name": "kid-8"}
-                    ];
+                function getAvatars (params) {
+                    var tmpAvatars = [];
+                    
+                    if (params.pageLength != undefined) {
+                        var p = 0;
+                        var j = 0
+                        for (var i=0,p=0,j=0 ; i < avatars.length; i++) { 
+                            
+                            if (!tmpAvatars[p]) tmpAvatars[p] = []
+                            
+                            tmpAvatars[p][j] = avatars[i];
+                            j++;
+                            
+                            if (j >= params.pageLength) {
+                                j = 0;
+                                p++;
+                            }
+                        }
+                    } else {
+                        tmpColor = vm.avatars;
+                    }
+                    
+                    return tmpAvatars;
+                }
+                
+                function getAvatarsColors (params) {
+                    
+                    var tmpColor = [];
+                    
+                    if (params.pageLength != undefined) {
+                        var p = 0;
+                        var j = 0
+                        for (var i=0,p=0,j=0 ; i < colors.length; i++) { 
+                            
+                            if (!tmpColor[p]) tmpColor[p] = []
+                            
+                            tmpColor[p][j] = colors[i];
+                            j++;
+                            
+                            if (j >= params.pageLength) {
+                                j = 0;
+                                p++;
+                            }
+                        }
+                    } else {
+                        tmpColor = vm.colors;
+                    }
+                    
+                    return tmpColor;
                 }
 	}
 
