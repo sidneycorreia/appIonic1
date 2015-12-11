@@ -1,13 +1,9 @@
 <ion-view view-title="{{ vm.title}}" class="">
-    <div class="header-wrapper">
-        <div class="header-content text-center">
-            <h2>Material Design</h2>
-            <h4>Ionic material design</h4>
-        </div>
-
-        <a href="javascript:;" class="button button-positive button-rounded icon ion-plus" ng-click="vm.openModal()"></a>
-    </div>
-    <ion-content class="has-expanded-header">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    
+    <ion-content>
 
         <ion-list>
             <ion-item ng-repeat="aluno in vm.alunosList" class="item-thumbnail-left item-icon-right item-borderless">
@@ -29,6 +25,8 @@
         </p>
  
     </ion-content>
+    
+    <a href="javascript:;" class="button button-positive button-rounded button-bottom icon ion-ios-plus-empty" ng-click="vm.openModal()"></a>
 </ion-view>
 
 <script id="add-aluno-modal.html" type="text/ng-template">
@@ -59,7 +57,7 @@
             <br/>
             
             <div class="row" ng-repeat="avatars in vm.avatarsList">
-                <div class="col col-33"
+                <div class="col"
                      ng-repeat="avatar in avatars"
                      ng-click="vm.selectAvatar(avatar)"
                      ng-class="avatar == vm.selectedAvatar ? 'aluno-avt-select bg-color-' + vm.selectedColor : ''">

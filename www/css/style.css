@@ -1,4 +1,17 @@
-/* Empty. Add your own CSS if you like */
+.button-bottom {
+    bottom: 30px;
+    right: 15px;
+    position: absolute;    
+}
+
+.button-rounded {
+    z-index: 10;
+    
+    -webkit-box-shadow: 0px 2px 3px 0.5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 3px 0.5px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 3px 0.5px rgba(0,0,0,0.3);
+}
+
 .center-content {
   display: table !important;
   width: 100% !important;
@@ -87,7 +100,7 @@
     box-shadow: 0px 1px 17px 0px rgba(0,0,0,0.75);
 }
 
-.header-wrapper > .button-rounded {
+.header-wrapper.button-rounded {
     float: right;
     right: 10px;
     top: -26px;
@@ -141,10 +154,6 @@
 
 .aluno-avt-select {
     border-radius: 50%;
-    
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,89,165,1);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,89,165,1);
-    box-shadow: 0px 0px 5px 2px rgba(0,89,165,1);
 }
 
 .color-palette {
@@ -157,12 +166,7 @@
 }
 
 .color-palette.seleted {
-    border-radius: 50%;
     color: #fff;
-    font-size: 36px;
-    width: 36px;
-    height: 36px;
-    display: inline-block;
 }
 
 /* ************************* */

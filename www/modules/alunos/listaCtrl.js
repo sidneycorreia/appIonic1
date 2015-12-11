@@ -25,8 +25,10 @@
             /*jshint validthis: true */
             var vm = this;
             vm.title = "FILHOS";
+            vm.navBarClass = "bar-positive";
+            
             vm.alunosList = alunosService.getList();
-            vm.avatarsList = alunosService.getAvatars({pageLength: 3});
+            vm.avatarsList = alunosService.getAvatars({pageLength: 4});
             vm.avatarColors = alunosService.getAvatarsColors({pageLength: 5});
 
             /* INICIO MODAL */
