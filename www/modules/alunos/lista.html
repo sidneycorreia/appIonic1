@@ -1,13 +1,9 @@
 <ion-view view-title="{{ vm.title}}" class="">
-    <div class="header-wrapper">
-        <div class="header-content text-center">
-            <h2>Material Design</h2>
-            <h4>Ionic material design</h4>
-        </div>
-
-        <a href="javascript:;" class="button button-positive button-rounded icon ion-plus" ng-click="vm.openModal()"></a>
-    </div>
-    <ion-content class="has-expanded-header">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    
+    <ion-content>
 
         <ion-list>
             <ion-item ng-repeat="aluno in vm.alunosList" class="item-thumbnail-left item-icon-right item-borderless">
@@ -27,8 +23,10 @@
         <p class="text-center padding-top">
             <a href="#/auth/login" class="button button-clear button-positive">Login</a>
         </p>
-
+ 
     </ion-content>
+    
+    <a href="javascript:;" class="button button-positive button-rounded button-bottom icon ion-ios-plus-empty" ng-click="vm.openModal()"></a>
 </ion-view>
 
 <script id="add-aluno-modal.html" type="text/ng-template">
@@ -48,16 +46,22 @@
                 </label>
             </div>
             
+            <div class="row text-center" ng-repeat="colors in vm.avatarColors">
+                <div class="col" ng-repeat="color in colors">
+                    <span class="color-palette bg-color-{{color}}" ng-click="vm.selectColor(color)">
+                        <i ng-class="color == vm.selectedColor ? 'icon ion-ios-checkmark-outline' : 'icon ion-record'"></i>
+                    </span>
+                </div>
+            </div>
+    
+            <br/>
             
-            <div class="row" ng-repeat="avatar in vm.avatarsList" ng-if="$index % 3 === 0">
-                <div class="col col-33" ng-if="$index < vm.avatarsList.length" ng-click="vm.selectAvatar($index)" ng-class="$index == vm.selectedAvatar ? 'aluno-avt-select' : ''">
-                    <img ng-src="img/face-{{vm.avatarsList[$index].name}}.png" width="100%" />
-                </div>
-                <div class="col col-33" ng-if="$index + 1 < vm.avatarsList.length" ng-click="vm.selectAvatar($index+1)" ng-class="$index+1 == vm.selectedAvatar ? 'aluno-avt-select' : ''">
-                    <img ng-src="img/face-{{vm.avatarsList[$index + 1].name}}.png" width="100%" />
-                </div>
-                <div class="col col-33" ng-if="$index + 2 < vm.avatarsList.length" ng-click="vm.selectAvatar($index+2)" ng-class="$index+2 == vm.selectedAvatar ? 'aluno-avt-select' : ''">
-                    <img ng-src="img/face-{{vm.avatarsList[$index + 2].name}}.png" width="100%" />
+            <div class="row" ng-repeat="avatars in vm.avatarsList">
+                <div class="col"
+                     ng-repeat="avatar in avatars"
+                     ng-click="vm.selectAvatar(avatar)"
+                     ng-class="avatar == vm.selectedAvatar ? 'aluno-avt-select bg-color-' + vm.selectedColor : ''">
+                    <img ng-src="img/face-{{avatar}}.png" width="100%" />
                 </div>
             </div>
             
