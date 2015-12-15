@@ -1,31 +1,24 @@
 <ion-view view-title="{{ vm.title}}" class="">
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar class="bar-trasparent">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     
+    <div class="header-wrapper">
+        <div class="header-content text-center bg-color-{{vm.aluno.avatar_bg}}">
+            <div class="row">
+                <div class="col col-33 col-offset-33">
+                    <img ng-src="img/face-{{vm.aluno.avatar}}.png" class="aluno-avt bg-color-white" width="100%"/>
+                </div>
+            </div>
+            
+            <h4>{{vm.aluno.nome}}</h4>
+        </div>
+        
+    </div>
+    
     <ion-content>
 
-        <ion-list>
-            <ion-item
-                ng-repeat="aluno in vm.alunosList"
-                href="#/alunos/ver/{{aluno.cod}}"
-                class="item-thumbnail-left item-icon-right item-borderless">
-
-                <img ng-src="img/face-{{aluno.avatar}}.png" class="aluno-avt bg-color-{{aluno.avatar_bg}}"/>
-
-                <div>
-                    <br/>
-                    <strong>{{aluno.nome}}</strong>
-                    <p>Infantil III </p>
-                </div>
-
-                <i class="icon ion-ios-arrow-right"></i>
-            </ion-item>
-        </ion-list>
-
-        <p class="text-center padding-top">
-            <a href="#/auth/login" class="button button-clear button-positive">Login</a>
-        </p>
+        
  
     </ion-content>
     

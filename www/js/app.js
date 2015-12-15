@@ -1,5 +1,6 @@
 angular.module('app', [
     'ionic'
+    ,'ngRoute'
 ])
 
 .run(function ($ionicPlatform) {

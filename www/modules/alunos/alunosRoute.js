@@ -17,6 +17,13 @@ angular.module('app')
                 controller: 'AlunosListaCtrl as vm',
                 controllerAs: 'vm' //por enquanto isso nao funciona 
                     
+            })
+            .state('alunos_ver', {
+                url: '/alunos/ver/:id',
+                templateUrl: 'modules/alunos/ver.html',
+                controller: 'AlunosVerCtrl as vm',
+                controllerAs: 'vm' //por enquanto isso nao funciona 
+                    
             });
             
         $urlRouterProvider.otherwise('/');

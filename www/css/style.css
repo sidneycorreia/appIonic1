@@ -87,7 +87,7 @@
 }
 
 .header-wrapper > .header-content {
-    background-color: #0059A5 !important;
+    /*background-color: #0059A5 !important;*/
     /*background: url(../img/background.png);*/
     border-botom: solid 1px #0c63ee;
     
@@ -124,6 +124,10 @@
     background: none;
     border: none;
     color: #fff;
+}
+
+.bar-trasparent.button-clear.button-clear {
+    color: #fff !important;
 }
 
 .button-rounded {
@@ -171,6 +175,7 @@
 
 /* ************************* */
 
+.bg-color-white		{ background-color: #fff; }
 .bg-color-lime		{ background-color: #A4C400; }
 .bg-color-green		{ background-color: #60A917; }
 .bg-color-emerald	{ background-color: #008A00; }
