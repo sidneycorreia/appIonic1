@@ -151,9 +151,9 @@
     border-radius: 50%;
     display: inline-block;
     
-    -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.39);
+-moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.39);
+box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.39);
 }
 
 .aluno-avt-select {

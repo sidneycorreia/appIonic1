@@ -1,10 +1,10 @@
 <ion-view view-title="{{vm.aluno.nome}}" class="">
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar class="bar-trasparent">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     
     <div class="header-wrapper">
-        <div class="header-content text-center bg-color-blur">
+        <div class="header-content text-center bg-color-{{vm.aluno.avatar_bg}}">
             <div class="row">
                 <div class="col col-33">
                     <img ng-src="img/face-{{vm.aluno.avatar}}.png" class="aluno-avt bg-color-{{vm.aluno.avatar_bg}}" width="100%"/>
