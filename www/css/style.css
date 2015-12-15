@@ -175,6 +175,7 @@
 
 /* ************************* */
 
+.bg-color-blur		{ background: url('../img/bg-blur.jpg') no-repeat top left;}
 .bg-color-white		{ background-color: #fff; }
 .bg-color-lime		{ background-color: #A4C400; }
 .bg-color-green		{ background-color: #60A917; }

@@ -1,20 +1,37 @@
-<ion-view view-title="{{ vm.title}}" class="">
-    <ion-nav-bar class="bar-trasparent">
+<ion-view view-title="{{vm.aluno.nome}}" class="">
+    <ion-nav-bar class="bar-positive">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     
     <div class="header-wrapper">
-        <div class="header-content text-center bg-color-{{vm.aluno.avatar_bg}}">
+        <div class="header-content text-center bg-color-blur">
             <div class="row">
-                <div class="col col-33 col-offset-33">
-                    <img ng-src="img/face-{{vm.aluno.avatar}}.png" class="aluno-avt bg-color-white" width="100%"/>
+                <div class="col col-33">
+                    <img ng-src="img/face-{{vm.aluno.avatar}}.png" class="aluno-avt bg-color-{{vm.aluno.avatar_bg}}" width="100%"/>
+                </div>
+                <div class="col col-66 text-left">
+                    <strong>{{vm.aluno.nome}}</strong>
                 </div>
             </div>
-            
-            <h4>{{vm.aluno.nome}}</h4>
         </div>
         
     </div>
+    
+    <ion-tabs class="tabs-positive tabs-icon-only">
+
+  <ion-tab title="Home" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+    <!-- Tab 1 content -->
+  </ion-tab>
+
+  <ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+    <!-- Tab 2 content -->
+  </ion-tab>
+
+  <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+    <!-- Tab 3 content -->
+  </ion-tab>
+
+</ion-tabs>
     
     <ion-content>
 
