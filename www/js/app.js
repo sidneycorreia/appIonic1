@@ -14,4 +14,10 @@ angular.module('app', [
             StatusBar.styleDefault();
         }
     });
+    
 })
+
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.backButton.text('').icon('ion-ios-arrow-left');
+    $ionicConfigProvider.backButton.previousTitleText(false);
+});

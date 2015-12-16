@@ -17,10 +17,10 @@
 	function service($http) {
 
 		var list = [
-                    {"cod": 0, "nome": "Heitor", "avatar": "kid-1", "avatar_bg" : "green"},	
-                    {"cod": 1, "nome": "Heloisa", "avatar": "kid-2", "avatar_bg" : "mauve"},	
-                    {"cod": 2, "nome": "Tomaz", "avatar": "kid-3", "avatar_bg" : "orange"},	
-                    {"cod": 3, "nome": "Sofia", "avatar": "kid-4", "avatar_bg" : "red"}	
+                    {"cod": 0, "nome": "Heitor", "avatar": "kid-2", "avatar_bg" : "green"},	
+                    {"cod": 1, "nome": "Heloisa", "avatar": "kid-1", "avatar_bg" : "mauve"},	
+                    {"cod": 2, "nome": "Tomaz", "avatar": "kid-4", "avatar_bg" : "orange"},	
+                    {"cod": 3, "nome": "Sofia", "avatar": "kid-3", "avatar_bg" : "red"}	
 //                    {"nome": "Filho 5", "avatar": "kid-5", "avatar_bg" : "crimson"},	
 //                    {"nome": "Filho 6", "avatar": "kid-6", "avatar_bg" : "violet"},	
 //                    {"nome": "Filho 7", "avatar": "kid-7", "avatar_bg" : "cobalt"},

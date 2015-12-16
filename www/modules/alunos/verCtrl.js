@@ -29,7 +29,6 @@
             vm.avatarColors = alunosService.getAvatarsColors({pageLength: 5}); 
             vm.aluno = alunosService.get({id: $stateParams.id});
             
-            console.log($stateParams.id);
             
 //            vm.selectedAvatar = vm.aluno.avatar;
 //            vm.selectAvatar = function (index) {
