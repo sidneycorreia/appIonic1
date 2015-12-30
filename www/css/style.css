@@ -45,7 +45,7 @@
 .login {
     background: url(../img/background.png);
     /*background-color: #271664;*/
-    background-color: #0059A5;
+    background-color: #387ef5;
 }
 
 .login .list-inset {
@@ -114,6 +114,19 @@
 .header-wrapper > .header-content > h2,
 .header-wrapper > .header-content > h4 {
     color: #fff;
+    
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header-wrapper > .header-content > .avatar {
+    border-radius: 50%;
+    border: solid 5px #fff;
+    max-width: 100px;
+    
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.39);
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.39);
 }
 
 .has-expanded-header {
@@ -183,7 +196,7 @@
 
 /* ************************* */
 
-.bg-color-blur		{ background: url('../img/bg-blur.jpg');}
+.bg-color-positive	{ background-color: #387ef5;}
 .bg-color-white		{ background-color: #fff; }
 .bg-color-lime		{ background-color: #A4C400; }
 .bg-color-green		{ background-color: #60A917; }

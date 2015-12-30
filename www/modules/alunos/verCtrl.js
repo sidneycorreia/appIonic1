@@ -13,7 +13,7 @@
 	.module('app')
 	.controller('AlunosVerCtrl', Controller);
 
-	Controller.$inject = ['alunosService', '$ionicModal','$scope', '$stateParams'];
+	Controller.$inject = ['alunosService', '$ionicModal','$scope', '$stateParams', '$ionicActionSheet'];
 
 	/*
 	* recommend
@@ -21,7 +21,7 @@
 	* and bindable members up top.
 	*/
 
-	function Controller(alunosService, $ionicModal, $scope, $stateParams) {
+	function Controller(alunosService, $ionicModal, $scope, $stateParams, $ionicActionSheet) {
             /*jshint validthis: true */
             var vm = this;
             
@@ -39,6 +39,20 @@
 //            vm.selectColor = function (color) {
 //                vm.selectedColor = color;
 //            }
+            
+            vm.showContextMenu = function () {
+                $ionicActionSheet.show({
+                    buttons: [
+                      { text: 'Remover aluno' }
+                    ],
+//                    destructiveText: 'Delete',
+                    titleText: 'O que deseja fazer?',
+                    cancelText: 'Fechar',
+                    buttonClicked: function(index) {
+                        return true;
+                    }
+                });
+            }
             
             return vm;
 	}
